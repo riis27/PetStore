@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Adoption Website</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    body {
+        background-image: url('https://images.unsplash.com/photo-1508802153073-e549b30d1ac0?q=80&w=1115&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .pet-box {
+        place-items: center;
+        background-color: rgba(255, 255, 255, 0.7);
+        padding: 20px;
+        border-radius: 10px;
+        margin: 10px;
+        cursor: pointer;
+        /* Make box clickable */
+        transition: transform 0.5s;
+        /* Smooth scaling on hover */
+    }
+
+    .pet-box:hover {
+        transform: scale(1.05);
+        /* Scale up slightly on hover */
+
+    }
+
+    .pet-box img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+        margin-bottom: 10px;
+    }
+
+    .pet-box h3 {
+        display: flex;
+        justify-content: space-between;
+        /* Name to left, age to right */
+        align-items: center;
+    }
+
+    .pet-box h3 span.age {
+        font-size: 0.7em;
+        /* Smaller font */
+        font-weight: normal;
+        /* Less bold (or font-weight: 400;) */
+        color: #777;
+        /* Lighter color */
+        margin: 15px;
+        /* Add some space between name and age */
+    }
+
+    .pet-info {
+        display: none;
+        margin-top: 10px;
+    }
+
+    .pet-info p {
+        margin-bottom: 5px;
+    }
+
+    .pet-info strong {
+        font-weight: bold;
+    }
+
+    .pet-container {
+        display: grid;
+        grid-gap: 20px;
+        margin-bottom: 20px;
+    }
+
+
+    /* Media Queries */
+
+    /* Phone & Tablet */
+    @media (min-width: 576px) and (max-width: 991px) {
+
+        /* Adjust breakpoint as needed */
+        .pet-container {
+            grid-template-columns: repeat(2, 1fr);
+            /* 2 columns */
+            grid-template-rows: repeat(3, 1fr);
+            /* 3 rows */
+        }
+    }
+
+    /* Large Screens (Desktop) */
+    @media (min-width: 992px) {
+
+        /* Adjust breakpoint as needed */
+        .pet-container {
+            grid-template-columns: repeat(3, 1fr);
+            /* 3 columns */
+            grid-template-rows: repeat(2, 1fr);
+            /* 2 rows */
+        }
+    }
+</style>
+<header>
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+        <div class="container-fluid">
+            <div class="d-flex justify-content-between align-items-center w-100"> <a class="navbar-brand"
+                    href="index.html">
+                    <img src="./assets/Pawsh.jpeg" class="navbar-image" alt="Pawsh">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="about.html">Our Mission <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="adoption.html">Adoption</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="services.html">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="FAQs.html">FAQs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<body>
+    <div class="container">
+        <div class="pet-container">
+        </div>
+    </div>
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // Your JavaScript code (exactly as you provided it) goes here.
+        class Pet {
+            constructor(image, name, age, sex, breed, disposition, traits) {
+                this.image = image;
+                this.name = name;
+                this.age = age;
+                this.sex = sex;
+                this.breed = breed;
+                this.disposition = disposition;
+                this.traits = traits;
+            }
+
+            createBox() {
+                const box = document.createElement('div');
+                box.classList.add('pet-box');
+
+                box.innerHTML = `
+                    <img src="${this.image}" alt="${this.name}">
+                    <h3>${this.name} <span class="age">(${this.age})</span></h3> 
+                    <button class="btn btn-light expand-button">Learn More</button>
+                    <div class="pet-info">
+                        <p><strong>Breed:</strong> ${this.breed}</p>
+                         <p><strong>Sex:</strong> ${this.sex}</p>
+                        <p><strong>Disposition:</strong> ${this.disposition}</p>
+                         <p><strong>Traits:</strong> ${this.traits}</p>
+                    </div>
+                `;
+
+                const expandButton = box.querySelector('.expand-button');
+                const petInfo = box.querySelector('.pet-info');
+
+                expandButton.addEventListener('click', () => {
+                    petInfo.style.display = petInfo.style.display === 'block' ? 'none' : 'block';
+                    expandButton.textContent = petInfo.style.display === 'block' ? 'Hide' : 'Learn More';
+                });
+
+                return box;
+            }
+        }
+
+        const pets = [
+            new Pet("https://images.pexels.com/photos/11773582/pexels-photo-11773582.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", "Buddy", "3 years", "Male", "Golden Retriever", "Friendly", "enjoys long walks on the beach"),
+            new Pet("https://images.pexels.com/photos/29983805/pexels-photo-29983805/free-photo-of-charming-grey-cat-with-expressive-face-outdoors.jpeg?auto=compress&cs=tinysrgb&w=600", "Bella", "2 years", "Female", "Labrador", "Playful", "Energetic"),
+            new Pet("https://images.pexels.com/photos/4203280/pexels-photo-4203280.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", "Max", "1 year", "Male", "German Shepherd", "Loyal", "Energetic"),
+            new Pet("https://images.pexels.com/photos/9195629/pexels-photo-9195629.jpeg?auto=compress&cs=tinysrgb&w=600", "Daisy", "4 years", "Female", "Beagle", "Curious", "Energetic"),
+            new Pet("https://images.pexels.com/photos/11629817/pexels-photo-11629817.jpeg?auto=compress&cs=tinysrgb&w=600", "Charlie", "5 years", "Male", "Poodle", "Intelligent", "Energetic"),
+            new Pet("https://images.pexels.com/photos/29881327/pexels-photo-29881327/free-photo-of-siberian-husky-dog-with-striking-blue-eyes.jpeg?auto=compress&cs=tinysrgb&w=600", "Lucy", "2 years", "Female", "Doodle", "Energetic", "Energetic")
+        ];
+
+        const petContainer = document.querySelector('.pet-container');
+        pets.forEach(pet => {
+            const box = pet.createBox();
+            petContainer.appendChild(box);
+        });
+
+        $(document).ready(function () {
+            // ... (rest of your jQuery code)
+        });
+    </script>
+</body>
+<footer>
+    <p>&copy; 2025 Pawsh Inc.</p>
+</footer>
+
+</html>

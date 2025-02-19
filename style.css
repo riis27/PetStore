@@ -4,8 +4,8 @@ body {
     margin: 0;
     padding: 0;
     display: flex; /* Needed for sticky footer */
-    flex-direction: column; /* Needed for sticky footer */
-    min-height: 100vh; /* Needed for sticky footer */
+    flex-direction: column; 
+    min-height: 80vh; /* Needed for sticky footer */
 }
 
 .navbar-image {
@@ -72,7 +72,7 @@ main {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
-    flex: 1; /* Needed for sticky footer */
+    flex: 1; 
 }
 
 #navbar {
@@ -139,12 +139,6 @@ nav li {
     margin-left: 20px;
 }
 
-main {
-    padding: 20px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Creates 3 equal columns */
-    grid-gap: 20px;
-}
 
 /* Main Image Styling */
 .featured-pet {
@@ -217,167 +211,42 @@ main {
 footer {
     background-color: #333;
     color: #fff;
-    padding: 10px;
+    padding: 8px;
     text-align: center;
+    height: 40px;
 }
+
 /* Media Queries */
 
-/* X-Small Phone (typically below 576px) */
+/* X-Small Phone */
 @media (max-width: 575px) {
-    .navbar-expand-sm {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .navbar-toggler {
-        display: block;
-    }
-
-    .navbar-collapse {
-        display: none;
-    }
-
-    .navbar-collapse.show {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .navbar-nav {
-        flex-direction: column;
-    }
-
-    .nav-item {
-        margin: 5px 0;
-    }
-
+    /* ... (Your existing x-small styles) ... */
     main {
-        grid-template-columns: repeat(2, 1fr); /* Two columns on x-small screens */
+        grid-template-columns: repeat(1, 1fr); /* 1 column on x-small screens */
     }
-
     .featured-pet {
-        grid-column: span 2; /* Span two columns on x-small screens */
-    }
-
-    .featured-pet .details {
-        width: 90%;
-        top: auto;
-        left: 50%;
-        transform: translateX(-50%);
-        position: relative;
-        background-color: rgba(0, 0, 0, 0.3);
-        padding: 10px;
-    }
-
-    .featured-pet .details h2 {
-        font-size: 1.2em;
-    }
-
-    .featured-pet .image-block img {
-        width: 100%;
-        object-fit: contain; /* Contain image on x-small screens */
-    }
-
-    .highlights, .adoption, .details, .stories, .team, .map, .faqs {
-        padding: 10px;
-    }
-
-    .stories, .team {
-        display: none; /* Optional: Hide on x-small screens */
+        grid-column: span 1; /* Span 1 column on x-small screens */
     }
 }
 
-/* Tablet (typically px and above) */
+/* Tablet */
 @media (min-width: 576px) and (max-width: 991px) {
-    .navbar-expand-md {
-        flex-direction: row;
-        align-items: center;
-    }
-
-    .navbar-toggler {
-        display: none;
-    }
-
-    .navbar-collapse {
-        display: flex !important;
-    }
-
-    .navbar-nav {
-        flex-direction: row;
-    }
-
-    .nav-item {
-        margin: 0 10px;
-    }
-
+    /* ... (Your existing tablet styles) ... */
     main {
-        grid-template-columns: repeat(2, 1fr); /* Two columns on tablets */
+        grid-template-columns: repeat(3, 1fr); /* 2 columns on tablets */
     }
-
-    .featured-pet {
-        grid-column: span 2; /* Span two columns on tablets */
-    }
-
-    .featured-pet .details {
-        width: 30%;
-        top: 85%;
-    }
-
-    .featured-pet .image-block img {
-        object-fit: contain; /* Contain image on tablets */
-    }
-
-    .highlights, .adoption, .details, .stories, .team, .map, .faqs {
-        padding: 15px;
+     .featured-pet {
+        grid-column: span 3; /* Span 2 column on tablet screens */
     }
 }
 
-/* Desktop (typically 992px and above) */
+/* Desktop */
 @media (min-width: 992px) {
-    .navbar-expand-lg {
-        flex-direction: row;
-        align-items: center;
-    }
-
-    .navbar-toggler {
-        display: none;
-    }
-
-    .navbar-collapse {
-        display: flex !important;
-    }
-
-    .navbar-nav {
-        flex-direction: row;
-    }
-
-    .nav-item {
-        margin: 0 10px;
-    }
-
+    /* ... (Your existing desktop styles) ... */
     main {
-        grid-template-columns: repeat(3, 1fr); /* Three columns on desktops */
+        grid-template-columns: repeat(3, 1fr); /* 3 columns on desktops */
     }
-
-    .featured-pet {
-        grid-column: span 3; /* Span three columns on desktops */
-    }
-
-    .featured-pet .details {
-        width: 30%;
-        top: 90%;
-    }
-
-    .featured-pet .image-block img {
-        object-fit: cover; /* Cover image on desktops (or contain) */
-    }
-
-    .highlights, .adoption, .details, .stories, .team, .map, .faqs {
-        padding: 20px;
-    }
-
-    .stories, .team {
-        display: block;
+     .featured-pet {
+        grid-column: span 3; /* Span 3 column on desktop screens */
     }
 }
-Key changes:
-
