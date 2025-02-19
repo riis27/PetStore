@@ -1,0 +1,383 @@
+/* Header & Footer  */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Needed for sticky footer */
+    flex-direction: column; /* Needed for sticky footer */
+    min-height: 100vh; /* Needed for sticky footer */
+}
+
+.navbar-image {
+    width: 300px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+.navbar-image {
+    max-width: 100px; /* Limit maximum width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+@media (max-width: 768px) { /* Adjust breakpoint as needed */
+    .navbar-image {
+        max-width: 100px; /* Reduce size on smaller screens */
+    }
+}
+
+header {
+    background-color: #f0f0f0;
+    width: 100;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky; /* Sticky positioning */
+    top: 0; /* Stick to the top */
+    z-index: 100; /* Ensure it's above other content */
+}
+
+/* Add a background color to the header on scroll */
+    .navbar {
+            width: 100%; /* Ensure navbar takes full width */
+            padding: 10px 10px; /* Adjust padding as needed */
+        }
+
+        .container-fluid { /* Add Bootstrap's container-fluid */
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+header.sticky {
+    background-color: rgba(240, 240, 240, 0.95); /* Slightly transparent background */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+}
+
+.logo-slogan {
+    display: flex;
+    flex-direction: column;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    margin-left: 20px;
+}
+
+main {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    flex: 1; /* Needed for sticky footer */
+}
+
+#navbar {
+  position: sticky;
+  top: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+#navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+#navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+#navbar a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.content {
+  padding: 16px;
+}
+
+
+/* Page Layout */
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #f0f0f0;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-slogan {
+    display: flex;
+    flex-direction: column;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    margin-left: 20px;
+}
+
+main {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Creates 3 equal columns */
+    grid-gap: 20px;
+}
+
+/* Main Image Styling */
+.featured-pet {
+    grid-column: span 3;
+    position: relative; /* Key: Make this a positioning context */
+}
+
+.featured-pet .image-block {
+    width: 100%;
+    overflow: hidden; /* Optional: Prevents image from overflowing */
+}
+
+.featured-pet .image-block img { /* Target the image inside image-block */
+    width: 100%;
+    display: block; /* Prevents a small space below the image */
+}
+
+.featured-pet .details {
+    position: absolute; /* Key: Position the text overlay */
+    top: 90%;
+    left: 80%;
+    transform: translate(-50%, -50%); /* Key: Center the overlay */
+    width: 30%; /* Or a specific width */
+    background-color: rgba(0, 0, 0, 0.1); /* Transparent background */
+    color: white;
+    padding: 0px;
+    box-sizing: border-box; /* Include padding in width calculation */
+    text-align: center; /* Center text within the overlay */
+}
+
+/* Image Overlay Styling */
+.featured-pet .details h2 {
+    margin-top: 0;
+    font-size: 1em; /* Default size */
+}
+
+.featured-pet:hover .image-block img {
+    transform: scale(1.05); /* Slightly enlarge the image */
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+
+/* Container Layout and Styling */
+.highlights, .adoption, .details, .stories, .team, .map, .faqs {
+    border: 1px solid #ccc;
+    padding: 20px;
+}
+
+.image-block {
+    text-align: center;
+}
+
+.image-block img {
+    max-width: 100%;
+    height: auto;
+}
+
+.stories .story, .team .member {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.stories .story img, .team .member img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+/* Media Queries */
+
+/* X-Small Phone (typically below 576px) */
+@media (max-width: 575px) {
+    .navbar-expand-sm {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-toggler {
+        display: block;
+    }
+
+    .navbar-collapse {
+        display: none;
+    }
+
+    .navbar-collapse.show {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+    }
+
+    .nav-item {
+        margin: 5px 0;
+    }
+
+    main {
+        grid-template-columns: repeat(2, 1fr); /* Two columns on x-small screens */
+    }
+
+    .featured-pet {
+        grid-column: span 2; /* Span two columns on x-small screens */
+    }
+
+    .featured-pet .details {
+        width: 90%;
+        top: auto;
+        left: 50%;
+        transform: translateX(-50%);
+        position: relative;
+        background-color: rgba(0, 0, 0, 0.3);
+        padding: 10px;
+    }
+
+    .featured-pet .details h2 {
+        font-size: 1.2em;
+    }
+
+    .featured-pet .image-block img {
+        width: 100%;
+        object-fit: contain; /* Contain image on x-small screens */
+    }
+
+    .highlights, .adoption, .details, .stories, .team, .map, .faqs {
+        padding: 10px;
+    }
+
+    .stories, .team {
+        display: none; /* Optional: Hide on x-small screens */
+    }
+}
+
+/* Tablet (typically px and above) */
+@media (min-width: 576px) and (max-width: 991px) {
+    .navbar-expand-md {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .navbar-toggler {
+        display: none;
+    }
+
+    .navbar-collapse {
+        display: flex !important;
+    }
+
+    .navbar-nav {
+        flex-direction: row;
+    }
+
+    .nav-item {
+        margin: 0 10px;
+    }
+
+    main {
+        grid-template-columns: repeat(2, 1fr); /* Two columns on tablets */
+    }
+
+    .featured-pet {
+        grid-column: span 2; /* Span two columns on tablets */
+    }
+
+    .featured-pet .details {
+        width: 30%;
+        top: 85%;
+    }
+
+    .featured-pet .image-block img {
+        object-fit: contain; /* Contain image on tablets */
+    }
+
+    .highlights, .adoption, .details, .stories, .team, .map, .faqs {
+        padding: 15px;
+    }
+}
+
+/* Desktop (typically 992px and above) */
+@media (min-width: 992px) {
+    .navbar-expand-lg {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .navbar-toggler {
+        display: none;
+    }
+
+    .navbar-collapse {
+        display: flex !important;
+    }
+
+    .navbar-nav {
+        flex-direction: row;
+    }
+
+    .nav-item {
+        margin: 0 10px;
+    }
+
+    main {
+        grid-template-columns: repeat(3, 1fr); /* Three columns on desktops */
+    }
+
+    .featured-pet {
+        grid-column: span 3; /* Span three columns on desktops */
+    }
+
+    .featured-pet .details {
+        width: 30%;
+        top: 90%;
+    }
+
+    .featured-pet .image-block img {
+        object-fit: cover; /* Cover image on desktops (or contain) */
+    }
+
+    .highlights, .adoption, .details, .stories, .team, .map, .faqs {
+        padding: 20px;
+    }
+
+    .stories, .team {
+        display: block;
+    }
+}
+Key changes:
+
