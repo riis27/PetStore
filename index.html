@@ -4,10 +4,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pet Adoption Website</title>
+    <title>Pawsh Inc. Home</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
+<style>
+    .button {
+        display: inline-block;
+        /* Or block, depending on your layout */
+        position: center;
+        padding: 2px 10px;
+        /* Adjust padding as needed - slightly larger than Contact Us */
+        background-color: #876f6d;
+        /* A more inviting/action-oriented color - example: coral/salmon */
+        color: white;
+        /* White text is good on darker backgrounds */
+        text-decoration: none;
+        /* Remove underline */
+        border: none;
+        /* Remove default border */
+        border-radius: 30px;
+        /* Slightly more rounded corners - adjust to your preference */
+        cursor: pointer;
+        font-size: 1.1em;
+        /* Slightly larger font size to stand out */
+        font-weight: bold;
+        /* Make the text bold for emphasis */
+        /* Add any other button styling you like */
+        width: 150px;
+        height: 30px;
+        align-items: center;
+    }
+
+    .button:hover {
+        background-color: #88a37d;
+        /* Slightly darker hover color for feedback */
+        /* Add other hover effects if desired */
+    }
+</style>
 
 <body>
     <header>
@@ -15,7 +49,7 @@
             <div class="container-fluid">
                 <div class="d-flex justify-content-between align-items-center w-100"> <a class="navbar-brand"
                         href="index.html">
-                        <img src="./assets/Pawsh.jpeg" class="navbar-image" alt="Pawsh">
+                        <img src="./assets/logo.jpeg" class="navbar-image" alt="Pawsh">
                     </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -45,7 +79,12 @@
             </div>
         </nav>
     </header>
-
+    <style>
+        header,
+        footer {
+            width: 100%;
+        }
+    </style>
     <main>
         <section class="featured-pet">
             <div class="image-block">
@@ -53,8 +92,7 @@
                     alt="Featured Pet">
             </div>
             <div class="details">
-                <h2>We make your favor</h2>
-                <p>(Image + Text)</p>
+                <h2>Bringing you closer to your favorite memories.</h2>
             </div>
         </section>
 
@@ -68,7 +106,8 @@
                 <img src="https://images.unsplash.com/photo-1470390356535-d19bbf47bacb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHBldCUyMGFkb3B0aW9ufGVufDB8MHwwfHx8Mg%3D%3D"
                     alt="Pets Available">
             </div>
-            <h2>Pets Available for Adoption</h2>
+            <h2>New Friends!</h2>
+            <a href="./adoption.html" class="button">Adopt Me</a>
             <p>[Content]</p>
         </section>
 
@@ -77,36 +116,61 @@
             <p>[Content]</p>
         </section>
 
-        <section class="stories">
-            <h2>Customer Pet Stories</h2>
-            <div class="story">
-                <img src="https://images.unsplash.com/photo-1597467300696-ce10c74bbaa1?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    alt="Customer 1">
-                <p>[Story 1]</p>
-            </div>
-            <div class="story">
-                <img src="https://images.unsplash.com/photo-1593173589854-c9c28824cc89?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDI2fHx8ZW58MHx8fHx8"
-                    alt="Customer 2">
-                <p>[Story 2]</p>
-            </div>
-        </section>
 
         <section class="team">
-            <h2>Team Member List</h2>
+            <h2>Meet Our Team</h2>
             <div class="member">
-                <img src="placeholder.jpg" alt="Member 1">
-                <p>Member Name 1</p>
+
+                <p>"Through my vision to create an ethical, care-based bridge for families and fur friends to connect, Pawsh leads the forefront in forging unique bonds that hold high standards and integrity in every pairing Pawsh helps bring together.
+                    <br>
+                   ~ Param Javastrapni, Founder
+                </p>
+                <img src="https://images.pexels.com/photos/6497112/pexels-photo-6497112.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    alt="Member 1">
             </div>
             <div class="member">
-                <img src="https://images.unsplash.com/photo-1559076728-a51fe1c1f97a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDMxfHx8ZW58MHx8fHx8"
+
+                <p>Not only does she keep meticulous records, Elemina also spearheads the animal photography that we
+                    offer our breeders and families to help their fur friends put their best paw forward!
+                    <br>
+                    Elemina Boolean, Manager
+                </p>
+                <img src="https://images.pexels.com/photos/3936894/pexels-photo-3936894.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                     alt="Member 2">
-                <p>Member Name 2</p>
             </div>
         </section>
 
-        <section class="map">
-            <img src="placeholder.jpg" alt="Map">
-            <p>Link Map of Pet Directory (Pages commonly navigated to)</p>
+        <section class="thanks">
+            <img src="https://images.unsplash.com/photo-1554830072-52d78d0d4c18?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cGV0JTIwYWRvcHRpb258ZW58MHwxfDB8fHwy"
+                alt="thanks">
+            <p>Thank you on behalf of our fur friends and partners, for choosing Pawsh for your family!</p>
+        </section>
+
+        <section class="stories">
+            <h2>Adoption Stories</h2>
+            <div class="story">
+
+                <img src="https://images.pexels.com/photos/7752806/pexels-photo-7752806.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    alt="Customer 1">
+
+                <p>"I recently adopted a dog from Pawsh Inc., and I couldn't be happier with the experience. They
+                    clearly care about the animals and made sure I was a good fit for my new furry friend."
+                    <br>
+                    ~ Tara Weils, Cinci OH
+                </p>
+
+
+            </div>
+            <div class="story">
+                <img src="https://images.pexels.com/photos/16454770/pexels-photo-16454770/free-photo-of-elegant-mother-posing-with-daughter-and-white-dog.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    alt="Customer 2">
+                <p>"Mom surprised me with a puppy she adopted from Pawsh for my 10th birthday! She even came with the
+                    cutest dog toys! They were so nice, and now I have the cuddliest best friend ever!!"
+                    <br>
+                    ~ Max Laird, Loveland OH
+                </p>
+
+            </div>
         </section>
 
         <section class="faqs">
@@ -114,32 +178,39 @@
                 <img src="https://images.unsplash.com/photo-1583512603866-910c8542ba1b?q=80&w=988&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                     alt="FAQs">
             </div>
-            <h2>FAQs</h2>
-            <p>[Content]</p>
+            <h2>Our Most Common</h2>
+            <a href="./FAQs.html" class="button">Questions</a>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, nihil suscipit. Fugit, sunt
+                repellendus!</p>
         </section>
-        <section class="faqs">
+        <section class="services">
             <div class="image-block">
                 <img src="https://images.unsplash.com/photo-1692382496182-05f3984391fc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8cGV0JTIwYm94fGVufDB8MXwwfHx8Mg%3D%3D"
                     alt="Membership">
             </div>
-            <h2>Membership</h2>
-            <p>[Content]</p>
+            <h2>Check Out Our</h2>
+            <a href="./adoption.html" class="button">Services</a>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate sunt, ducimus at vitae minima
+                accusantium tenetur delectus voluptatibus deserunt omnis!</p>
         </section>
-        <section class="faqs">
+        <section class="contacts">
             <div class="image-block">
                 <img src="https://images.unsplash.com/photo-1611700885802-4ea038105709?q=80&w=986&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                     alt="Contact-us">
             </div>
-            <h2>Contact Us</h2>
-            <p>[Content]</p>
+            <h2>Need More Help?</h2>
+            <a href="./contact.html" class="button">Contact Us</a>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio sequi esse quae ex consequuntur.
+            </p>
         </section>
     </main>
 
-      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 <footer>
     <p>&copy; 2025 Pawsh Inc.</p>
 </footer>
+
 </html>

@@ -4,11 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pet Adoption Website</title>
+    <title>PAWSH Inc. - Adoption</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <style>
+    header,
+    footer {
+        width: 100%;
+    }
+
     body {
         background-image: url('https://images.unsplash.com/photo-1508802153073-e549b30d1ac0?q=80&w=1115&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
         background-size: cover;
@@ -22,7 +27,6 @@
         border-radius: 10px;
         margin: 10px;
         cursor: pointer;
-        /* Make box clickable */
         transition: transform 0.5s;
         /* Smooth scaling on hover */
     }
@@ -43,19 +47,16 @@
     .pet-box h3 {
         display: flex;
         justify-content: space-between;
-        /* Name to left, age to right */
+        font-size: larger;
+        font-weight: bold;
         align-items: center;
     }
 
     .pet-box h3 span.age {
         font-size: 0.7em;
-        /* Smaller font */
         font-weight: normal;
-        /* Less bold (or font-weight: 400;) */
         color: #777;
-        /* Lighter color */
         margin: 15px;
-        /* Add some space between name and age */
     }
 
     .pet-info {
@@ -78,29 +79,105 @@
     }
 
 
-    /* Media Queries */
+    /* Media Queries (Adoption Page) */
+    @media (max-width: 767px) {
 
-    /* Phone & Tablet */
-    @media (min-width: 576px) and (max-width: 991px) {
-
-        /* Adjust breakpoint as needed */
+        /* Phone */
         .pet-container {
             grid-template-columns: repeat(2, 1fr);
-            /* 2 columns */
-            grid-template-rows: repeat(3, 1fr);
-            /* 3 rows */
+            grid-template-rows: auto;
+            grid-gap: 10px;
+        }
+
+        .pet-box {
+            padding: 10px;
+            font-size: 0.85em;
+            margin: 5px;
+        }
+
+        .pet-box img {
+            margin-bottom: 5px;
+        }
+
+        .pet-box h3 span.age {
+            margin: 5px;
+            font-size: 0.75em;
+        }
+
+        .pet-box h3 {
+            font-size: 1.5em;
+        }
+
+        /* Navbar */
+        .navbar-expand-md .navbar-nav {
+            flex-direction: column;
+        }
+
+        .navbar-expand-md .navbar-toggler {
+            display: block;
+        }
+
+        .navbar-expand-md .navbar-collapse {
+            display: none;
+        }
+
+        .navbar-expand-md .navbar-collapse.show {
+            display: flex;
+        }
+
+        /* Footer */
+        footer {
+            font-size: 0.8em;
+            padding: 5px;
         }
     }
 
-    /* Large Screens (Desktop) */
-    @media (min-width: 992px) {
+    @media (min-width: 768px) {
 
-        /* Adjust breakpoint as needed */
+        /* Tablet and Desktop */
         .pet-container {
-            grid-template-columns: repeat(3, 1fr);
-            /* 3 columns */
-            grid-template-rows: repeat(2, 1fr);
-            /* 2 rows */
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            /* Responsive columns */
+            grid-template-rows: auto;
+            grid-gap: 20px;
+        }
+
+        .pet-box {
+            padding: 20px;
+            font-size: 0.9em;
+            margin: 10px;
+        }
+
+        .pet-box img {
+            margin-bottom: 10px;
+        }
+
+        .pet-box h3 span.age {
+            margin: 15px;
+            font-size: 0.7em;
+        }
+
+        .pet-box h3 {
+            font-size: 1.5em;
+        }
+
+        /* Navbar */
+        .navbar-expand-lg .navbar-nav {
+            flex-direction: row;
+        }
+
+        .navbar-expand-lg .navbar-toggler {
+            display: none;
+        }
+
+        .navbar-expand-lg .navbar-collapse {
+            display: flex !important;
+        }
+
+        /* Footer */
+        footer {
+            font-size: 1em;
+            padding: 8px;
         }
     }
 </style>
@@ -109,7 +186,7 @@
         <div class="container-fluid">
             <div class="d-flex justify-content-between align-items-center w-100"> <a class="navbar-brand"
                     href="index.html">
-                    <img src="./assets/Pawsh.jpeg" class="navbar-image" alt="Pawsh">
+                    <img src="./assets/logo.jpeg" class="navbar-image" alt="Pawsh">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -152,66 +229,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script>
-        // Your JavaScript code (exactly as you provided it) goes here.
-        class Pet {
-            constructor(image, name, age, sex, breed, disposition, traits) {
-                this.image = image;
-                this.name = name;
-                this.age = age;
-                this.sex = sex;
-                this.breed = breed;
-                this.disposition = disposition;
-                this.traits = traits;
-            }
-
-            createBox() {
-                const box = document.createElement('div');
-                box.classList.add('pet-box');
-
-                box.innerHTML = `
-                    <img src="${this.image}" alt="${this.name}">
-                    <h3>${this.name} <span class="age">(${this.age})</span></h3> 
-                    <button class="btn btn-light expand-button">Learn More</button>
-                    <div class="pet-info">
-                        <p><strong>Breed:</strong> ${this.breed}</p>
-                         <p><strong>Sex:</strong> ${this.sex}</p>
-                        <p><strong>Disposition:</strong> ${this.disposition}</p>
-                         <p><strong>Traits:</strong> ${this.traits}</p>
-                    </div>
-                `;
-
-                const expandButton = box.querySelector('.expand-button');
-                const petInfo = box.querySelector('.pet-info');
-
-                expandButton.addEventListener('click', () => {
-                    petInfo.style.display = petInfo.style.display === 'block' ? 'none' : 'block';
-                    expandButton.textContent = petInfo.style.display === 'block' ? 'Hide' : 'Learn More';
-                });
-
-                return box;
-            }
-        }
-
-        const pets = [
-            new Pet("https://images.pexels.com/photos/11773582/pexels-photo-11773582.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", "Buddy", "3 years", "Male", "Golden Retriever", "Friendly", "enjoys long walks on the beach"),
-            new Pet("https://images.pexels.com/photos/29983805/pexels-photo-29983805/free-photo-of-charming-grey-cat-with-expressive-face-outdoors.jpeg?auto=compress&cs=tinysrgb&w=600", "Bella", "2 years", "Female", "Labrador", "Playful", "Energetic"),
-            new Pet("https://images.pexels.com/photos/4203280/pexels-photo-4203280.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", "Max", "1 year", "Male", "German Shepherd", "Loyal", "Energetic"),
-            new Pet("https://images.pexels.com/photos/9195629/pexels-photo-9195629.jpeg?auto=compress&cs=tinysrgb&w=600", "Daisy", "4 years", "Female", "Beagle", "Curious", "Energetic"),
-            new Pet("https://images.pexels.com/photos/11629817/pexels-photo-11629817.jpeg?auto=compress&cs=tinysrgb&w=600", "Charlie", "5 years", "Male", "Poodle", "Intelligent", "Energetic"),
-            new Pet("https://images.pexels.com/photos/29881327/pexels-photo-29881327/free-photo-of-siberian-husky-dog-with-striking-blue-eyes.jpeg?auto=compress&cs=tinysrgb&w=600", "Lucy", "2 years", "Female", "Doodle", "Energetic", "Energetic")
-        ];
-
-        const petContainer = document.querySelector('.pet-container');
-        pets.forEach(pet => {
-            const box = pet.createBox();
-            petContainer.appendChild(box);
-        });
-
-        $(document).ready(function () {
-            // ... (rest of your jQuery code)
-        });
-    </script>
+   <script src="./script.js"></script>
 </body>
 <footer>
     <p>&copy; 2025 Pawsh Inc.</p>
