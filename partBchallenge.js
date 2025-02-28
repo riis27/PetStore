@@ -2,11 +2,52 @@
 //Market Content
 var shop = [
     {
-        title: 'Tigers',
+        title: '$350',
         image: 'https://images.unsplash.com/photo-1508817628294-5a453fa0b8fb?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
         name: 'Tiggy',
+        breed: 'tiger',
         disposition: 'friendly',
-        description: 'baskljsalk'
+        description: 'Friendly and curious'
+    },
+    {
+        title: '$825',
+        image: 'https://images.unsplash.com/photo-1716064554838-f9ae49db992b?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGNhcHliYXJhfGVufDB8MHwwfHx8Mg%3D%3D',
+        name: 'Fern',
+        breed: 'Capybara',
+        disposition: 'sassy',
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, quibusdam!"
+    },
+    {
+        title: '$400',
+        image: 'https://images.unsplash.com/photo-1559084906-27df42f15c5f?q=80&w=842&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        name: 'Pattie',
+        breed: 'Parrot',
+        disposition: 'friendly',
+        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, quibusdam!'
+    },
+    {
+        title: '$2,000',
+        image: 'https://images.unsplash.com/photo-1516590914727-51e55df118d5?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8d2hpdGUlMjBmb3h8ZW58MHwwfDB8fHwy',
+        name: 'Snowdrop',
+        breed: 'Arctic Fox',
+        disposition: 'friendly',
+        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, quibusdam!'
+    },
+    {
+        title: '$80',
+        image: 'https://images.unsplash.com/photo-1636370395847-e0781efa45e6?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8ZnVubnklMjBhbmltYWx8ZW58MHwwfDB8fHwy',
+        name: 'Sunflower',
+        breed: 'Gecko',
+        disposition: 'funny',
+        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, quibusdam!'
+    },
+    {
+        title: '$650',
+        image: 'https://images.unsplash.com/photo-1512988442538-a42600ac4634?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGZhbGNvbnxlbnwwfDB8MHx8fDI%3D',
+        name: 'Sharpie',
+        breed: 'Falcon',
+        disposition: 'fast',
+        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, quibusdam!'
     },
 
 
@@ -20,12 +61,13 @@ for (var i = 0; i < shop.length; i++) {
     var heading = '<div class="product"><span><h5>' + shop[i].title + '</h5>';
     var image = '<img src="' + shop[i].image + '" alt="' + shop[i].title + '"/>';
     var name = '<p> ' + shop[i].name + '</p></span>';
+    var breed = '<p> ' + shop[i].breed + '</p></span>';
     var description = `
         <div class="product-details" style="display: none;">  <p>${shop[i].description}</p></div>
         <button class="btn btn-warning show-details" type="button">See More</button>
     </div>`; 
 
-    var concatThis = heading + image + name + description;
+    var concatThis = heading + image + name + breed + description;
     postHTML += concatThis; // Use += for string concatenation
 }
 
