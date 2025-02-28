@@ -95,10 +95,10 @@ products.forEach(product => {
     product.style.borderRadius = "10px";
     product.style.margin = "10px";
     product.style.cursor = "pointer";
-    product.style.transition = "transform 0.5s";
+    product.style.transition = "transform 0.3s";
 
     product.addEventListener('mouseover', () => {
-        product.style.transform = "scale(1.05)";
+        product.style.transform = "scale(1.04)";
     });
 
     product.addEventListener('mouseout', () => {
