@@ -2,52 +2,46 @@
 //Market Content
 var shop = [
     {
-        title: '$350',
-        image: 'https://images.unsplash.com/photo-1508817628294-5a453fa0b8fb?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-        name: 'Tiggy',
-        breed: 'tiger',
-        disposition: 'friendly',
-        description: 'Friendly and curious'
+        title: 'Welcome Package',
+        image: 'https://images.pexels.com/photos/20607811/pexels-photo-20607811/free-photo-of-couple-expecting-a-baby-posing-in-a-studio-with-a-dog.jpeg?auto=compress&cs=tinysrgb&w=400',
+        name: '15min, 3 prints, custom tag',
+        price: '$150',
+        description: 'Our welcome package is specially priced to capture your first professional photos with your adopted pet! Choose a custom tag from our collection, and we add the names and details of your newest family member for you while you snap photos. Welcome to the Pawsh family!'
     },
     {
-        title: '$825',
-        image: 'https://images.unsplash.com/photo-1716064554838-f9ae49db992b?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGNhcHliYXJhfGVufDB8MHwwfHx8Mg%3D%3D',
-        name: 'Fern',
-        breed: 'Capybara',
-        disposition: 'sassy',
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, quibusdam!"
+        title: 'Birthday Session',
+        image: 'https://images.pexels.com/photos/27176120/pexels-photo-27176120/free-photo-of-a-couple-wearing-party-hats-celebrating-their-dogs-birthday.jpeg?auto=compress&cs=tinysrgb&w=400',
+        name: '15min, 10 prints, 1 smash cake',
+        price: '$300',
+        description: "Whether it's yours, your fur family, or someone's birthday, this festive photoshoot comes with a pet-friendly 6 inch smash cake made by our local Pet Bakery for your pet to make an adorable mess of! Up to 5 other family members can join; additional members add $20 surcharge per person. Other services and additions priced a la carte."
     },
     {
-        title: '$400',
-        image: 'https://images.unsplash.com/photo-1559084906-27df42f15c5f?q=80&w=842&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-        name: 'Pattie',
-        breed: 'Parrot',
-        disposition: 'friendly',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, quibusdam!'
+        title: 'Family & Friends',
+        image: 'https://images.unsplash.com/photo-1526363269865-60998e11d82d?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZmFtaWx5JTIwd2l0aCUyMHBldHxlbnwwfDB8MHx8fDI%3D',
+        name: '30min, 10 prints, unlimited family',
+        price: '$350',
+        description: 'Includes everything in the Welcome Package with as many family members, and family photos you want in a 30 minute session! 10 prints total included; other services/additions priced a la carte.'
     },
     {
-        title: '$2,000',
-        image: 'https://images.unsplash.com/photo-1516590914727-51e55df118d5?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8d2hpdGUlMjBmb3h8ZW58MHwwfDB8fHwy',
-        name: 'Snowdrop',
-        breed: 'Arctic Fox',
-        disposition: 'friendly',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, quibusdam!'
+        title: 'Paws & Prints',
+        image: 'https://images.pexels.com/photos/7788657/pexels-photo-7788657.jpeg?auto=compress&cs=tinysrgb&w=400',
+        name: '45min, Paw Plaque, 8x8 album',
+        price: '$450',
+        description: 'You and your family will cherish the beautiful memories made in this 45 minute session, which comes with a special "Paw Plaque" of your pet paws, an accessory/toy of your choice, and 20 prints in a 6x6 album.'
     },
     {
-        title: '$80',
-        image: 'https://images.unsplash.com/photo-1636370395847-e0781efa45e6?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8ZnVubnklMjBhbmltYWx8ZW58MHwwfDB8fHwy',
-        name: 'Sunflower',
-        breed: 'Gecko',
-        disposition: 'funny',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, quibusdam!'
+        title: 'Deluxe Dream',
+        image: 'https://images.pexels.com/photos/573293/pexels-photo-573293.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+        name: '1hr & up, 8x8 album, designer detail',
+        price: '$500+',
+        description: 'No dream or demand is too large to fill! With the right photographer and the right vision, we can help you create the photos to cherish for a lifetime! Our photographers come to you at the location you desire for your once in a lifetime portraits. Comes with one 8x8 album of all photos you choose, a Paw Plaque, and our custom tag; other details and customizations upon request'
     },
     {
-        title: '$650',
-        image: 'https://images.unsplash.com/photo-1512988442538-a42600ac4634?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGZhbGNvbnxlbnwwfDB8MHx8fDI%3D',
-        name: 'Sharpie',
-        breed: 'Falcon',
-        disposition: 'fast',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, quibusdam!'
+        title: 'Pawsh Patron',
+        image: 'https://images.pexels.com/photos/10117520/pexels-photo-10117520.jpeg?auto=compress&cs=tinysrgb&w=400',
+        name: 'Sponsor our Mission',
+        price: '$500+',
+        description: 'Give the gift of smiles for a lifetime! Your donation goes towards the care and training costs of other animals in our partner programs, so that they too can find their forever families. In turn you receive our Welcome Package, plus a plaque and special pin to display your contribution in caring for our animal friends.'
     },
 
 
@@ -61,13 +55,13 @@ for (var i = 0; i < shop.length; i++) {
     var heading = '<div class="product"><span><h5>' + shop[i].title + '</h5>';
     var image = '<img src="' + shop[i].image + '" alt="' + shop[i].title + '"/>';
     var name = '<p> ' + shop[i].name + '</p></span>';
-    var breed = '<p> ' + shop[i].breed + '</p></span>';
+    var price = '<p> ' + shop[i].price + '</p></span>';
     var description = `
         <div class="product-details" style="display: none;">  <p>${shop[i].description}</p></div>
         <button class="btn btn-warning show-details" type="button">See More</button>
     </div>`; 
 
-    var concatThis = heading + image + name + breed + description;
+    var concatThis = heading + image + name + price + description;
     postHTML += concatThis; // Use += for string concatenation
 }
 
