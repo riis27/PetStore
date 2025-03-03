@@ -58,7 +58,7 @@ for (var i = 0; i < shop.length; i++) {
     var price = '<p> ' + shop[i].price + '</p></span>';
     var description = `
         <div class="product-details" style="display: none;">  <p>${shop[i].description}</p></div>
-        <button class="btn btn-warning show-details" type="button">See More</button>
+        <button class="btn btn-light show-details" type="button">See More</button>
     </div>`; 
 
     var concatThis = heading + image + name + price + description;
@@ -72,6 +72,7 @@ const body = document.body;
 body.style.backgroundImage = "url('https://images.unsplash.com/photo-1508802153073-e549b30d1ac0?q=80&w=1115&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')";
 body.style.backgroundSize = "cover";
 body.style.backgroundRepeat = "no-repeat";
+body.style.textAlign = "center";
 
 const market = document.getElementById('market'); 
 
@@ -119,9 +120,22 @@ products.forEach(product => {
 const showDetailsButtons = document.querySelectorAll('.show-details');
 
 showDetailsButtons.forEach(button => {
+    button.style.backgroundColor = "white"; 
+    button.style.color = "black"; 
+    button.style.border = 'none'; 
+    button.style.padding = '8px 12px'; 
+    button.style.borderRadius = '5px'; 
+    button.style.cursor = 'pointer';
     button.addEventListener('click', () => {
         const productDetails = button.previousElementSibling; 
         productDetails.style.display = productDetails.style.display === "block" ? "none" : "block"; 
         button.textContent = productDetails.style.display === "block" ? "See Less" : "See More"; 
     });
+});
+
+const priceElements = document.querySelectorAll('.product p:nth-child(2)'); // Selects the second p element in each product div
+
+priceElements.forEach(priceElement => {
+    priceElement.style.fontSize = "1.3em";
+    priceElement.style.fontWeight = "bold";
 });
