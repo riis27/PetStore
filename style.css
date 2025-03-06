@@ -91,9 +91,14 @@ main {
 }
 
 main h2 {
-    padding-top: 10px;
+    padding: 10px;
     font-size: 1.7em;
 }
+
+main p {
+    padding: 10px;
+}
+
 
 .story p {
     text-align: right;
@@ -104,9 +109,7 @@ main h2 {
     text-align: left;
     font-size: small;
 }
-.content {
-    padding: 16px;
-}
+
 
 .featured-pet {
     grid-column: 1 / -1;
@@ -202,6 +205,21 @@ main h2 {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-weight: bolder;
     font-size:larger;
+}
+
+/* Hompage Button Style */
+main .button {
+    background-color: rgb(88, 137, 88);
+    font-weight: bold;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+main .button:hover {
+    background-color: rgb(140, 185, 140);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    text-decoration: none;
 }
 
 /* Contact Form Style */
