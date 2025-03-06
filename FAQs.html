@@ -12,7 +12,7 @@
     <nav class="navbar navbar-expand-md navbar-light bg-light">
         <nav class="navbar navbar-expand-md navbar-light bg-light">
             <div class="container-fluid">
-                <div class="d-flex justify-content-between align-items-center w-100"> <a class="navbar-brand"
+                <div class="d-flex justify-content-between align-items-right w-100"> <a class="navbar-brand"
                         href="index.html">
                         <img src="./assets/logo.jpeg" class="navbar-image" alt="Pawsh">
                     </a>
@@ -45,70 +45,16 @@
         </nav>
     </nav>
 </header>
-<style>
-    body {
-        font-family: sans-serif;
-        margin: 20px;
-        text-align: center;
-    }
-
-    .faq-panel {
-        display: flex;
-        flex-wrap: wrap;
-        /* Allow wrapping for smaller screens */
-    }
-
-    .container {
-        padding: 20px;
-        width: 50%;
-        /* Each container takes 50% width */
-        box-sizing: border-box;
-        /* Include padding in width */
-    }
-
-    .faq-item {
-        border: 1px solid #ddd;
-        margin-bottom: 10px;
-        padding: 15px;
-        cursor: pointer;
-    }
-
-    .faq-question {
-        font-weight: bold;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .faq-answer {
-        display: none;
-        margin-top: 10px;
-    }
-
-    .faq-item.active .faq-answer {
-        display: block;
-    }
-
-    .faq-item.active .arrow {
-        transform: rotate(180deg);
-    }
-
-    .arrow {
-        transition: transform 0.3s ease;
-    }
-</style>
-
 <body>
-    <div class="faqheader">
+    <div class="page-header">
         <p>You can never ask enough questions when it comes to giving our animals a loving home! Below we have our most
             commonly asked questions; for other specific questions, you can contact us directly through our phone,
             email, or contact form.
         </p>
     </div>
 
-
-    <div class="faq-panel">
-        <div class="container">
+ 
+        <div class="faq-container">
             <h2>Pet Adoption </h2>
             <div class="faq-item">
                 <div class="faq-question">
@@ -152,54 +98,59 @@
                     discuss the return process.
                 </div>
             </div>
+
+            <div class="faq-container">
+                <h2>Photography Services </h2>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What types of photography services do you offer?</span>
+                        <span class="arrow">&#9660;</span>
+                    </div>
+                    <div class="faq-answer">
+                        We offer a wide range of photography services onsite, including custom services on location.
+                        Please
+                        refer to our Services page for more details.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How do I book a photography session?</span>
+                        <span class="arrow">&#9660;</span>
+                    </div>
+                    <div class="faq-answer">
+                        You can book a session by contacting us through our website, email, or phone. We'll discuss your
+                        needs
+                        and schedule a convenient time.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What are your pricing packages?</span>
+                        <span class="arrow">&#9660;</span>
+                    </div>
+                    <div class="faq-answer">
+                        Our pricing packages vary depending on the type of photography and the duration of the session.
+                        Please
+                        contact us for a detailed quote.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How long does it take to receive the edited photos?</span>
+                        <span class="arrow">&#9660;</span>
+                    </div>
+                    <div class="faq-answer">
+                        The turnaround time for edited photos is typically 1-2 weeks, depending on the volume of photos
+                        and
+                        the
+                        complexity of editing.
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="container">
-            <h2>Photography Services </h2>
-            <div class="faq-item">
-                <div class="faq-question">
-                    <span>What types of photography services do you offer?</span>
-                    <span class="arrow">&#9660;</span>
-                </div>
-                <div class="faq-answer">
-                    We offer a wide range of photography services onsite, including custom services on location. Please
-                    refer to our Services page for more details.
-                </div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question">
-                    <span>How do I book a photography session?</span>
-                    <span class="arrow">&#9660;</span>
-                </div>
-                <div class="faq-answer">
-                    You can book a session by contacting us through our website, email, or phone. We'll discuss your
-                    needs
-                    and schedule a convenient time.
-                </div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question">
-                    <span>What are your pricing packages?</span>
-                    <span class="arrow">&#9660;</span>
-                </div>
-                <div class="faq-answer">
-                    Our pricing packages vary depending on the type of photography and the duration of the session.
-                    Please
-                    contact us for a detailed quote.
-                </div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question">
-                    <span>How long does it take to receive the edited photos?</span>
-                    <span class="arrow">&#9660;</span>
-                </div>
-                <div class="faq-answer">
-                    The turnaround time for edited photos is typically 1-2 weeks, depending on the volume of photos and
-                    the
-                    complexity of editing.
-                </div>
-            </div>
-        </div>
-    </div>
+
+   
+
     <script>
         const faqItems = document.querySelectorAll('.faq-item');
         faqItems.forEach(item => {

@@ -74,6 +74,7 @@ body.style.backgroundSize = "cover";
 body.style.backgroundRepeat = "no-repeat";
 body.style.textAlign = "center";
 
+
 const market = document.getElementById('market'); 
 
 market.style.display = "grid";

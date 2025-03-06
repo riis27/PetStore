@@ -8,184 +8,12 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
-<style>
-    header,
-    footer {
-        width: 100%;
-    }
 
-    body {
-        background-image: url('https://images.unsplash.com/photo-1508802153073-e549b30d1ac0?q=80&w=1115&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
-
-    .pet-box {
-        place-items: center;
-        background-color: rgba(255, 255, 255, 0.7);
-        padding: 20px;
-        border-radius: 10px;
-        margin: 10px;
-        cursor: pointer;
-        transition: transform 0.5s;
-        /* Smooth scaling on hover */
-    }
-
-    .pet-box:hover {
-        transform: scale(1.05);
-        /* Scale up slightly on hover */
-
-    }
-
-    .pet-box img {
-        max-width: 100%;
-        height: auto;
-        border-radius: 10px;
-        margin-bottom: 10px;
-    }
-
-    .pet-box h3 {
-        display: flex;
-        justify-content: space-between;
-        font-size: larger;
-        font-weight: bold;
-        align-items: center;
-    }
-
-    .pet-box h3 span.age {
-        font-size: 0.7em;
-        font-weight: normal;
-        color: #777;
-        margin: 15px;
-    }
-
-    .pet-info {
-        display: none;
-        margin-top: 10px;
-    }
-
-    .pet-info p {
-        margin-bottom: 5px;
-    }
-
-    .pet-info strong {
-        font-weight: bold;
-    }
-
-    .pet-container {
-        display: grid;
-        grid-gap: 20px;
-        margin-bottom: 20px;
-    }
-
-
-    /* Media Queries (Adoption Page) */
-    @media (max-width: 767px) {
-
-        /* Phone */
-        .pet-container {
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: auto;
-            grid-gap: 10px;
-        }
-
-        .pet-box {
-            padding: 10px;
-            font-size: 0.85em;
-            margin: 5px;
-        }
-
-        .pet-box img {
-            margin-bottom: 5px;
-        }
-
-        .pet-box h3 span.age {
-            margin: 5px;
-            font-size: 0.75em;
-        }
-
-        .pet-box h3 {
-            font-size: 1.5em;
-        }
-
-        /* Navbar */
-        .navbar-expand-md .navbar-nav {
-            flex-direction: column;
-        }
-
-        .navbar-expand-md .navbar-toggler {
-            display: block;
-        }
-
-        .navbar-expand-md .navbar-collapse {
-            display: none;
-        }
-
-        .navbar-expand-md .navbar-collapse.show {
-            display: flex;
-        }
-
-        /* Footer */
-        footer {
-            font-size: 0.8em;
-            padding: 5px;
-        }
-    }
-
-    @media (min-width: 768px) {
-
-        /* Tablet and Desktop */
-        .pet-container {
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            /* Responsive columns */
-            grid-template-rows: auto;
-            grid-gap: 20px;
-        }
-
-        .pet-box {
-            padding: 20px;
-            font-size: 0.9em;
-            margin: 10px;
-        }
-
-        .pet-box img {
-            margin-bottom: 10px;
-        }
-
-        .pet-box h3 span.age {
-            margin: 15px;
-            font-size: 0.7em;
-        }
-
-        .pet-box h3 {
-            font-size: 1.5em;
-        }
-
-        /* Navbar */
-        .navbar-expand-lg .navbar-nav {
-            flex-direction: row;
-        }
-
-        .navbar-expand-lg .navbar-toggler {
-            display: none;
-        }
-
-        .navbar-expand-lg .navbar-collapse {
-            display: flex !important;
-        }
-
-        /* Footer */
-        footer {
-            font-size: 1em;
-            padding: 8px;
-        }
-    }
-</style>
 <header>
     <!-- Navbar  -->
     <nav class="navbar navbar-expand-md navbar-light bg-light">
         <div class="container-fluid">
-            <div class="d-flex justify-content-between align-items-center w-100"> <a class="navbar-brand"
+            <div class="d-flex justify-content-between align-items-right w-100"> <a class="navbar-brand"
                     href="index.html">
                     <img src="./assets/logo.jpeg" class="navbar-image" alt="Pawsh">
                 </a>
@@ -218,7 +46,7 @@
 </header>
 
 <body>
-    
+
 
 
     <!-- Pet Snapshots -->
@@ -234,7 +62,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-   <script src="./script.js"></script>
+    <script src="./script.js"></script>
 </body>
 <footer>
     <p>&copy; 2025 Pawsh Inc.</p>
