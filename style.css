@@ -4,14 +4,18 @@ body {
     font-family: sans-serif;
     margin: 0;
     padding: 0;
+    align-content: center;
+    text-align: center;
     display: flex;
     flex-direction: column;
+    flex: 1;
     min-height: 100vh;
     background-image: url("https://images.unsplash.com/photo-1707209856575-a80b9dff5524?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
     background-size: cover;
     background-repeat: no-repeat;
     color: #333;
 }
+
 
 
 /* Header and Footer */
@@ -34,8 +38,6 @@ header {
     /* Smooth transitions */
 
 }
-
-
 
 footer {
     background-color: #333;
@@ -75,12 +77,12 @@ nav ul {
 }
 
 nav li {
-    margin-left: 20px;
+    margin-left: 10px;
 }
 
 
-/* Homepage Content Sections */
 
+/* Homepage Content Sections */
 main {
     padding: 20px;
     flex: 1;
@@ -92,13 +94,35 @@ main {
 main h2 {
     padding: 10px;
     font-size: 1.7em;
+    font-family: "Merienda", cursive;
 }
 
 main p {
     padding: 10px;
 }
 
+.details p span {
+    font-weight: bold;
+}
 
+
+
+/* Highlights */
+.note {
+font-style: italic;
+font-weight: bold;
+font-family: "Merienda", cursive;
+font-size: .9em;
+}
+
+.highlights p {
+    font-size: small;
+}
+
+/* Store Hours */
+.details p {
+    margin: auto;
+}
 .story p {
     text-align: right;
     font-size: small;
@@ -110,6 +134,8 @@ main p {
 }
 
 
+
+/* Header Image  */
 .featured-pet {
     grid-column: 1 / -1;
     /* Span all columns by default */
@@ -131,10 +157,9 @@ main p {
     top: 80%;
     left: 75%;
     transform: translate(-50%, -50%);
-    width: 40%;
+    width: 50%;
     color: black;
-    font-style: italic;
-    box-sizing: content-box;
+    font-family: "Merienda", cursive;    box-sizing: content-box;
     text-align: right;
     border: none;
 }
@@ -178,6 +203,9 @@ main p {
     object-fit: cover;
 }
 
+
+
+/* Member & Customer Styles */
 .stories p {
     padding-left: 20px;
 }
@@ -201,7 +229,7 @@ main p {
 }
 
 .thanks {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: "Merienda", cursive;
     font-weight: bolder;
     font-size:larger;
 }
@@ -237,12 +265,16 @@ main .button:hover {
     margin-left: 100px;
     margin-right: 100px;
     text-align: center;
+    flex: 1;
 
 }
 
 .Letter img {
-    border-radius: 40px;
-    padding-bottom: 30px;
+    border-radius: 40px !important;
+   
+    margin: 20px;
+    align-self: center;
+    max-width: 100%;
 }
 
 
@@ -308,22 +340,25 @@ main .button:hover {
 
 
 /* FAQs Page Style */
-body {
-    font-family: sans-serif;
-    text-align: center;
-}
 
 .page-header {
     padding-top: 30px;
-    margin-left: 70px;
-    margin-right: 70px;
+    width: 80%;
+    margin: auto;
+    
     font-size: smaller;
 }
 
-.faq-panel {
-    padding-bottom: 20px;
-    width: 100%;
-    box-sizing: border-box;
+.faq-container {
+    margin: auto;
+    width: 80%;
+    flex: 1;
+}
+
+.faq-container h2 {
+font-weight: bold;
+font-family: "Merienda", cursive;
+
 }
 
 .faq-item {
@@ -337,7 +372,8 @@ body {
     font-weight: bold;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    
+
 }
 
 .faq-answer {
@@ -365,7 +401,8 @@ body {
     border-radius: 10px;
     margin: 20px;
     display: block;
-    text-align: left;
+    text-align: left !important;
+    font-size: 1.2em;
     height: 100px;
     width: 500px;
     flex: 1;
@@ -377,7 +414,7 @@ body {
 
 
   /* XS Phone */
-@media (min-width: 375px) and (max-width: 420px) {
+@media (min-width: 300px) and (max-width: 430px) {
     main {
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 10px;
@@ -396,13 +433,13 @@ body {
     }
 
     .featured-pet .details {
-        font-size: 0.8em;
+        font-size: 0.70em;
         color: white;
         top: 90%;
         left: 50%;
         transform: translate(-50%, -50%);
         width: 90%;
-        text-align: right;
+        text-align: center;
     }
 
     .highlights,
@@ -442,6 +479,14 @@ body {
         width: 50px;
         height: 50px;
     }
+
+
+    #contact-container {
+        height: 80vh;
+        width: 80vw;
+        align-self: center;
+        
+    }
 }
 
 
@@ -471,6 +516,12 @@ body {
     
     .pet-box h3 {
         font-size: 1.5em;
+    }
+
+    #contact-container {
+        height: 80vh;
+        width: 80vw;
+        align-self: center;
     }
 
 }
@@ -542,8 +593,7 @@ body {
     #contact-container  {
         display: block;
         flex: 1;
-        float: left;
-        text-align: left;
+        align-items: left !important;
         height: 80vh;
         
        
