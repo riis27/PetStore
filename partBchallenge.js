@@ -62,14 +62,13 @@ for (var i = 0; i < shop.length; i++) {
     </div>`; 
 
     var concatThis = heading + image + name + price + description;
-    postHTML += concatThis; // Use += for string concatenation
+    postHTML += concatThis; 
 }
 
 document.getElementById('market').innerHTML = postHTML;
 
 // Styles  
 const body = document.body;
-body.style.backgroundImage = "url('https://images.unsplash.com/photo-1508802153073-e549b30d1ac0?q=80&w=1115&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')";
 body.style.backgroundSize = "cover";
 body.style.backgroundRepeat = "no-repeat";
 body.style.textAlign = "center";
@@ -134,7 +133,7 @@ showDetailsButtons.forEach(button => {
     });
 });
 
-const priceElements = document.querySelectorAll('.product p:nth-child(2)'); // Selects the second p element in each product div
+const priceElements = document.querySelectorAll('.product p:nth-child(2)'); 
 
 priceElements.forEach(priceElement => {
     priceElement.style.fontSize = "1.3em";
