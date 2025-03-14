@@ -71,5 +71,4 @@ pets.forEach(pet => {
 });
 
 $(document).ready(function () {
-    // ... (rest of your jQuery code)
 });
